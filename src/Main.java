@@ -1,7 +1,24 @@
 public class Main {
     public static void main(String[] args) {
+
+        //Zadanie 1
+        Animal zebra = new Animal("zebra");
+        zebra.name = "Albert";
+
+        zebra.feed();
+        System.out.println(zebra.weight);
+
+        for (int i = 0; i < 344; i++) {
+            zebra.takeForAWalk();
+        }
+        System.out.println(zebra.weight);
+        System.out.println(zebra.alive);
+
+        //Zadanie 2
         Car passat = new Car("vw", "ipsum", 2022);
         passat.millage = 69420.0;
+
+        Human seba = new Human("Sebastian", "Sebczyński", passat);
 
         System.out.println(passat.millage);
         System.out.println(passat.model);
@@ -14,16 +31,5 @@ public class Main {
         System.out.println("Model auta: " + fiat.model);
         System.out.println("Przebieg: " + fiat.millage);
 
-        Animal zebra = new Animal("zebra");
-        zebra.name = "Albert";
-
-        zebra.feed();
-        System.out.println(zebra.weight);
-
-        for(int i = 0; i < 344; i++){
-            zebra.takeForAWalk();
-        }
-        System.out.println(zebra.weight);
-        System.out.println(zebra.alive);
     }
 }
