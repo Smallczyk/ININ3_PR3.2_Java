@@ -31,5 +31,13 @@ public class Main {
         System.out.println("Model auta: " + fiat.model);
         System.out.println("Przebieg: " + fiat.millage);
 
+        //Zadanie 6
+        Car passat2 = new Car("vw", "ipsum", 2022);
+        passat.millage = 69420.0;
+
+        System.out.println(passat.equals(passat2));
+        System.out.println(passat);
+        System.out.println(passat2);
+
     }
 }
