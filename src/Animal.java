@@ -11,6 +11,16 @@ public class Animal {
         this.alive = true;
     }
 
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "species='" + species + '\'' +
+                ", name='" + name + '\'' +
+                ", weight=" + weight +
+                ", alive=" + alive +
+                '}';
+    }
+
     public void feed() {
         this.weight += 0.5;
     }

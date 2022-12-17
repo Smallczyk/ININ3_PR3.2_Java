@@ -13,6 +13,11 @@ public class Car {
     }
 
     @Override
+    public String toString() {
+        return producer +" "+ model  +" "+ yearOfProduction +" "+ millage;
+    }
+
+    @Override
     public boolean equals (Object c){
         if (this == c){
             return true;
@@ -23,4 +28,5 @@ public class Car {
         Car car = (Car) c;
         return producer == car.producer && model == car.model && yearOfProduction.equals(car.yearOfProduction);
     }
+
 }

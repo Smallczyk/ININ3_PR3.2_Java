@@ -14,6 +14,16 @@ public class Human {
         this.car = car;
     }
 
+    @Override
+    public String toString() {
+        return "Human{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                ", height=" + height +
+                '}';
+    }
+
     //Zadanie 4
     public Double getSalary() {
         //List StringList = new List();
