@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-        //Zadanie 1
+/*        //Zadanie 1
         Animal zebra = new Animal("zebra");
         zebra.name = "Albert";
 
@@ -37,7 +37,11 @@ public class Main {
 
         System.out.println(passat.equals(passat2));
         System.out.println(passat);
-        System.out.println(passat2);
+        System.out.println(passat2);*/
+
+        //Zadanie 7
+        Phone phone = new Phone();
+        phone.turnOn();
 
     }
 }

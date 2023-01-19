@@ -1,7 +1,7 @@
-public class Car {
-    String producer;
-    String model;
-    Integer yearOfProduction;
+import device.Device;
+
+public class Car extends Device {
+
     Double millage;
     Double value;
 
@@ -29,4 +29,8 @@ public class Car {
         return producer == car.producer && model == car.model && yearOfProduction.equals(car.yearOfProduction);
     }
 
+    @Override
+    public void turnOn() {
+
+    }
 }
