@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
 
-/*        //Zadanie 1
+        //Zadanie 1
         Animal zebra = new Animal("zebra");
         zebra.name = "Albert";
 
@@ -31,6 +31,17 @@ public class Main {
         System.out.println("Model auta: " + fiat.model);
         System.out.println("Przebieg: " + fiat.millage);
 
+
+        //Zadanie 3 & 4
+        Human robert = new Human("Robert", "Bobert", passat);
+        robert.getSalary();
+        robert.setSalary(2000D);
+        robert.getSalary();
+        robert.setSalary(2200D);
+        robert.getSalary();
+
+
+/*
         //Zadanie 6
         Car passat2 = new Car("vw", "ipsum", 2022);
         passat.millage = 69420.0;

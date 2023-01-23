@@ -1,4 +1,6 @@
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.Date;
 
 public class Human {
     String name;
@@ -26,9 +28,8 @@ public class Human {
 
     //Zadanie 4
     public Double getSalary() {
-        //List StringList = new List();
 
-        System.out.println(salary);
+        System.out.println(salary + " " + java.time.LocalDateTime.now());
         return salary;
     }
 
