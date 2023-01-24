@@ -1,6 +1,9 @@
 import java.awt.*;
+import java.time.LocalDateTime;
+import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Map;
 
 public class Human {
     String name;
@@ -9,6 +12,8 @@ public class Human {
     Double height;
     private Double salary;
     private Car car;
+
+    java.util.List<java.util.Map.Entry<LocalDateTime,Double>> dateMoney= new java.util.ArrayList<>();
 
     public Human(String name, String surname, Car car) {
         this.name = name;
@@ -28,8 +33,9 @@ public class Human {
 
     //Zadanie 4
     public Double getSalary() {
+        System.out.println(dateMoney);
+        dateMoney.add(new java.util.AbstractMap.SimpleEntry<>(LocalDateTime.now(),salary));
 
-        System.out.println(salary + " " + java.time.LocalDateTime.now());
         return salary;
     }
 

@@ -1,9 +1,9 @@
 public class Main {
     public static void main(String[] args) {
 
-        //Zadanie 1
+   /*     //Zadanie 1
         Animal zebra = new Animal("zebra");
-        zebra.name = "Albert";
+//        zebra.name = "Albert";
 
         zebra.feed();
         System.out.println(zebra.weight);
@@ -12,12 +12,13 @@ public class Main {
             zebra.takeForAWalk();
         }
         System.out.println(zebra.weight);
-        System.out.println(zebra.alive);
+        System.out.println(zebra.alive);*/
+/*
 
-        //Zadanie 2
         Car passat = new Car("vw", "ipsum", 2022);
         passat.millage = 69420.0;
 
+        //Zadanie 2
         Human seba = new Human("Sebastian", "Sebczyński", passat);
 
         System.out.println(passat.millage);
@@ -31,7 +32,8 @@ public class Main {
         System.out.println("Model auta: " + fiat.model);
         System.out.println("Przebieg: " + fiat.millage);
 
-
+*/
+        Car passat = new Car("ww", "ww", 2222);
         //Zadanie 3 & 4
         Human robert = new Human("Robert", "Bobert", passat);
         robert.getSalary();
@@ -51,8 +53,8 @@ public class Main {
         System.out.println(passat2);*/
 
         //Zadanie 7
-        Phone phone = new Phone();
-        phone.turnOn();
+     //   Phone phone = new Phone();
+       // phone.turnOn();
 
     }
 }
