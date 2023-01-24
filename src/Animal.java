@@ -1,8 +1,9 @@
-public class Animal {
+public class Animal implements Sellable {
     String species;
     String name;
     Double weight;
     Boolean alive;
+    Human owner;
 
 
     public Animal(String species) {
@@ -36,7 +37,16 @@ public class Animal {
 
             }
         }
+    }
 
-
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if (seller == owner){
+            if(price<=buyer.cash){
+                seller.cash += price;
+                buyer.cash -= price;
+                owner = buyer;
+            } else System.out.println("not enough money");
+        }else System.out.println("you dont own it");
     }
 }

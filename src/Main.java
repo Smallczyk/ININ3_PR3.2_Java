@@ -39,7 +39,7 @@ public class Main {
         robert.getSalary();
         robert.setSalary(2000D);
         robert.getSalary();
-        robert.setSalary(2200D);
+        robert.setSalary(22000D);
         robert.getSalary();
 
 
@@ -55,6 +55,25 @@ public class Main {
         //Zadanie 7
      //   Phone phone = new Phone();
        // phone.turnOn();
+
+        //Zadanie 8
+        Car skoda = new Car("skoda", "fabia", 2009);
+        Human andrzej = new Human("andrzej", "rzejdaj", skoda);
+        skoda.owner = andrzej;
+        skoda.getOwner();
+        andrzej.setSalary(5D); //samochód zostanie sprzedany tylko jak cash != null
+
+        skoda.sell(andrzej, robert, 2000.0);
+        skoda.getOwner();
+        andrzej.getSalary();
+
+        Animal makak = new Animal("małpa");
+        makak.owner = andrzej;
+        makak.sell(andrzej, robert, 2000D);
+        //makak.sell(andrzej, robert, 2000D);
+        andrzej.getSalary();
+        robert.getSalary();
+        System.out.println(makak.owner);
 
     }
 }

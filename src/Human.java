@@ -12,6 +12,7 @@ public class Human {
     Double height;
     private Double salary;
     private Car car;
+    public Double cash;
 
     java.util.List<java.util.Map.Entry<LocalDateTime,Double>> dateMoney= new java.util.ArrayList<>();
 
@@ -44,6 +45,7 @@ public class Human {
             throw new IllegalArgumentException();
         }
         this.salary = salary;
+        this.cash = salary;
         System.out.println("Salary increased by: " + salary + "\n Visit HR to sign contract amendment, " +
                 "ZUS and tax office knows everything. You can run, but you can't hide");
     }
