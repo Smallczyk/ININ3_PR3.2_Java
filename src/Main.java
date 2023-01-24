@@ -1,8 +1,14 @@
+import creatures.Animal;
+import creatures.FarmAnimal;
+import creatures.Human;
+import creatures.Pet;
+import device.Car;
+
 public class Main {
     public static void main(String[] args) {
 
    /*     //Zadanie 1
-        Animal zebra = new Animal("zebra");
+        creatures.Animal zebra = new creatures.Animal("zebra");
 //        zebra.name = "Albert";
 
         zebra.feed();
@@ -15,18 +21,18 @@ public class Main {
         System.out.println(zebra.alive);*/
 /*
 
-        Car passat = new Car("vw", "ipsum", 2022);
+        device.Car passat = new device.Car("vw", "ipsum", 2022);
         passat.millage = 69420.0;
 
         //Zadanie 2
-        Human seba = new Human("Sebastian", "Sebczyński", passat);
+        creatures.Human seba = new creatures.Human("Sebastian", "Sebczyński", passat);
 
         System.out.println(passat.millage);
         System.out.println(passat.model);
         System.out.println(passat.yearOfProduction);
         System.out.println(passat.producer);
 
-        Car fiat = new Car("Fiat", "multipla", 2090);
+        device.Car fiat = new device.Car("Fiat", "multipla", 2090);
         fiat.millage = 0.0;
 
         System.out.println("Model auta: " + fiat.model);
@@ -45,7 +51,7 @@ public class Main {
 
 /*
         //Zadanie 6
-        Car passat2 = new Car("vw", "ipsum", 2022);
+        device.Car passat2 = new device.Car("vw", "ipsum", 2022);
         passat.millage = 69420.0;
 
         System.out.println(passat.equals(passat2));
@@ -53,11 +59,11 @@ public class Main {
         System.out.println(passat2);*/
 
         //Zadanie 7
-     //   Phone phone = new Phone();
+     //   device.Phone phone = new device.Phone();
        // phone.turnOn();
 
         //Zadanie 8
-        Car skoda = new Car("skoda", "fabia", 2009);
+/*        Car skoda = new Car("skoda", "fabia", 2009);
         Human andrzej = new Human("andrzej", "rzejdaj", skoda);
         skoda.owner = andrzej;
         skoda.getOwner();
@@ -73,7 +79,20 @@ public class Main {
         //makak.sell(andrzej, robert, 2000D);
         andrzej.getSalary();
         robert.getSalary();
-        System.out.println(makak.owner);
+        System.out.println(makak.owner);*/
+
+        //Zadanie 9
+        Pet dog = new Pet("dog");
+        System.out.println(dog);
+        dog.feed();
+        System.out.println(dog);
+        dog.feed(40);
+        System.out.println(dog);
+
+        FarmAnimal cow = new FarmAnimal("cow");
+        System.out.println(cow);
+        cow.beEaten();
+        System.out.println(cow);
 
     }
 }

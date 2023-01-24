@@ -1,9 +1,8 @@
-import java.awt.*;
+package creatures;
+
+import device.Car;
+
 import java.time.LocalDateTime;
-import java.util.AbstractMap;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Map;
 
 public class Human {
     String name;
@@ -24,7 +23,7 @@ public class Human {
 
     @Override
     public String toString() {
-        return "Human{" +
+        return "creatures.Human{" +
                 "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", age=" + age +

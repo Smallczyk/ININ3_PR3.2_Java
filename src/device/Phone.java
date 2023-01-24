@@ -1,12 +1,15 @@
+package device;
+import creatures.Human;
 import device.Device;
+import device.Sellable;
 
-public class Phone extends Device implements Sellable{
+public class Phone extends Device implements Sellable {
     private int price;
     Human owner;
 
     @Override
     public String toString() {
-        return "Phone{" +
+        return "device.Phone{" +
                 "price=" + price +
                 '}';
     }

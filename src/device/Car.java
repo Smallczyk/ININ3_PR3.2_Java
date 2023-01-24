@@ -1,10 +1,11 @@
-import device.Device;
+package device;
+import creatures.Human;
 
 public class Car extends Device implements Sellable {
 
     Double millage;
-    Double value;
-    Human owner;
+    public Double value;
+    public Human owner;
 
     public Car(String producer, String model, Integer yearOfProduction) {
         this.producer = producer;

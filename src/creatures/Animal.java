@@ -1,9 +1,11 @@
-public class Animal implements Sellable {
+package creatures;
+
+public abstract class Animal implements Feedable{
     String species;
     String name;
-    Double weight;
+    public Double weight;
     Boolean alive;
-    Human owner;
+    public Human owner;
 
 
     public Animal(String species) {
@@ -14,7 +16,7 @@ public class Animal implements Sellable {
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "creatures.Animal{" +
                 "species='" + species + '\'' +
                 ", name='" + name + '\'' +
                 ", weight=" + weight +
@@ -25,6 +27,13 @@ public class Animal implements Sellable {
     public void feed() {
         this.weight += 0.5;
     }
+
+    public void feed(int foodWeight) {
+        if(foodWeight>0)
+        this.weight += foodWeight;
+    }
+
+
 
     public void takeForAWalk() {
         if (!this.alive) {
@@ -39,7 +48,7 @@ public class Animal implements Sellable {
         }
     }
 
-    @Override
+
     public void sell(Human seller, Human buyer, Double price) {
         if (seller == owner){
             if(price<=buyer.cash){
