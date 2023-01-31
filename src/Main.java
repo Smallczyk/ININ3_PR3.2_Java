@@ -3,6 +3,13 @@ import creatures.FarmAnimal;
 import creatures.Human;
 import creatures.Pet;
 import device.Car;
+import device.Electric;
+import device.LPG;
+import device.Phone;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -39,15 +46,15 @@ public class Main {
         System.out.println("Przebieg: " + fiat.millage);
 
 */
-        Car passat = new Car("ww", "ww", 2222);
+     /*   Car passat = new Car("ww", "ww", 2222);
         //Zadanie 3 & 4
-        Human robert = new Human("Robert", "Bobert", passat);
+        Human robert = new Human("Robert", "Bobert");
         robert.getSalary();
         robert.setSalary(2000D);
         robert.getSalary();
         robert.setSalary(22000D);
         robert.getSalary();
-
+*/
 
 /*
         //Zadanie 6
@@ -93,6 +100,17 @@ public class Main {
         System.out.println(cow);
         cow.beEaten();
         System.out.println(cow);
+
+//        Zadanie 10
+        List<String> appList = new LinkedList<String>();
+        appList.add(0, "czolgi");
+        appList.add(1, "kajaki");
+        Phone phone = new Phone();
+        phone.installAnApp("hehe");
+        phone.installAnApp(appList);
+
+        Electric ikarus = new Electric("ikarus", "ikarus", 1990);
+        ikarus.refuel();
 
     }
 }

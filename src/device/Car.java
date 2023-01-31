@@ -1,11 +1,11 @@
 package device;
 import creatures.Human;
 
-public class Car extends Device implements Sellable {
+public abstract class Car extends Device implements Sellable {
 
     Double millage;
-    public Double value;
     public Human owner;
+    abstract void refuel();
 
     public Car(String producer, String model, Integer yearOfProduction) {
         this.producer = producer;
@@ -51,4 +51,6 @@ public class Car extends Device implements Sellable {
             } else System.out.println("not enough money");
         } else System.out.println("you dont own it");
     }
+
+
 }

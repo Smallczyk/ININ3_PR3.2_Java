@@ -3,22 +3,28 @@ package creatures;
 import device.Car;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.Objects;
 
 public class Human {
+    public Double cash;
     String name;
     String surname;
     Integer age;
     Double height;
+    java.util.List<java.util.Map.Entry<LocalDateTime, Double>> dateMoney = new java.util.ArrayList<>();
     private Double salary;
-    private Car car;
-    public Double cash;
+    private Car[] garage;
+    double carsValue;
 
-    java.util.List<java.util.Map.Entry<LocalDateTime,Double>> dateMoney= new java.util.ArrayList<>();
-
-    public Human(String name, String surname, Car car) {
+    public Human(String name, String surname) {
         this.name = name;
         this.surname = surname;
-        this.car = car;
+        this.garage = new Car[3];
+    }
+
+    public Human(int size) {
+        this.garage = new Car[size];
     }
 
     @Override
@@ -34,7 +40,7 @@ public class Human {
     //Zadanie 4
     public Double getSalary() {
         System.out.println(dateMoney);
-        dateMoney.add(new java.util.AbstractMap.SimpleEntry<>(LocalDateTime.now(),salary));
+        dateMoney.add(new java.util.AbstractMap.SimpleEntry<>(LocalDateTime.now(), salary));
 
         return salary;
     }
@@ -50,17 +56,18 @@ public class Human {
     }
 
     //Zadanie 5
-    public Car getCar() {
-        return car;
+    public Car getCar(int space) {
+        return this.garage[space];
     }
 
-    public void setCar(Car car) {
-        if (car.value <= salary) {
-            this.car = car;
-            System.out.println(name + " bought a car");
-        }else if (car.value/12 < salary){
-            this.car = car;
-            System.out.println(name + " bought on installments");
-        }else System.out.println("ty biedaku nawet złota nie masz");
+    public void setCar(int space, Car car) {
+        this.garage[space] = car;
+    }
+
+    public double getValue() {
+        for (int i = 0; i <= garage.length; i++) {
+            carsValue += garage[i].value;
+        }
+        return carsValue;
     }
 }
