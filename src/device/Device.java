@@ -16,4 +16,8 @@ public abstract class Device {
     }
 
     public abstract void turnOn();
+
+    public Double getValue() {
+        return value;
+    }
 }

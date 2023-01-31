@@ -1,8 +1,10 @@
 package creatures;
 
 import device.Car;
+import device.Device;
 
 import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +17,6 @@ public class Human {
     java.util.List<java.util.Map.Entry<LocalDateTime, Double>> dateMoney = new java.util.ArrayList<>();
     private Double salary;
     private Car[] garage;
-    double carsValue;
 
     public Human(String name, String surname) {
         this.name = name;
@@ -55,7 +56,7 @@ public class Human {
                 "ZUS and tax office knows everything. You can run, but you can't hide");
     }
 
-    //Zadanie 5
+    //Zadanie 11
     public Car getCar(int space) {
         return this.garage[space];
     }
@@ -65,9 +66,10 @@ public class Human {
     }
 
     public double getValue() {
-        for (int i = 0; i <= garage.length; i++) {
-            carsValue += garage[i].value;
-        }
-        return carsValue;
+        double carValue = 0D;
+        for (int i = 0; i <= garage.length; i++) carValue += garage[i].value;
+        return carValue;
     }
+
+    
 }
